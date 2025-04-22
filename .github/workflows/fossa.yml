@@ -16,4 +16,4 @@ jobs:
     - name: Run FOSSA analysis
       uses: fossas/fossa-action@v1.3.3
       with:
-        api-key: ${{ secrets.FOSSA_API_KEY }}
+        api-key: e8046ef5031c08d22fa0626b3eabdf6c
