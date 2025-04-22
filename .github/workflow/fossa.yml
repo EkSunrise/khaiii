@@ -1,0 +1,19 @@
+name: FOSSA License Scan
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  fossa:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run FOSSA analysis
+      uses: fossas/fossa-action@v1.3.3
+      with:
+        api-key: ${{ secrets.FOSSA_API_KEY }}
